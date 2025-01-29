@@ -12,15 +12,14 @@ public class Main {
         GameScreen screen = new GameScreen(screen_height, screen_width); // Fixed parameter order
         screen.InitScreen();
 
-        /*
-        		// Init walls
+        		
 		wall wall = new wall('#');
 		wall.addWallsRow(screen, wall, 0); // First row
-		wall.addWallsRow(screen, wall, screen.getScreenHeight() - 1); // Last
-																		// row
+		wall.addWallsRow(screen, wall, screen.getScreenHeight() - 1);
+																		
 		wall.addWallsColumn(screen, wall, 0); // First column
-		wall.addWallsColumn(screen, wall, screen.getscreen_width() - 1); // Last
- */
+		wall.addWallsColumn(screen, wall, screen.getscreen_width() - 1); 
+ 
         Scanner movement = new Scanner(System.in);
         boolean isRunning = true;
 

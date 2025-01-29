@@ -1,5 +1,5 @@
 package src;
-/* 
+
 public class wall extends GameObject {
     public wall (){
         setSymbol("#");
@@ -19,4 +19,3 @@ public class wall extends GameObject {
 		}
 	}
 }
-*/

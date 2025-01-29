@@ -13,10 +13,10 @@ public class GameScreen {
     public void InitScreen() {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                screenBack[i][j] = '.'; // Initialize the screen with dots
+                screenBack[i][j] = '.'; 
             }
         }
-        PrintScreen(); // Optionally print the screen to verify initialization
+        PrintScreen(); 
     }
 
     public void PrintScreen() {
