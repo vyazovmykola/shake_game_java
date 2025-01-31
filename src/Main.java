@@ -6,11 +6,12 @@ public class Main {
     public static void main(String[] args) {
         final int screen_width = 30;
         final int screen_height = 30;
-        final int snake_position_y = screen_height / 2; // Correcting x/y dimensions
         final int snake_position_x = screen_width / 2;
 
-        GameScreen screen = new GameScreen(screen_height, screen_width); // Fixed parameter order
+        GameScreen screen = new GameScreen(screen_height, screen_width); 
         screen.InitScreen();
+
+        
 
         Scanner movement = new Scanner(System.in);
         boolean isRunning = true;
