@@ -1,12 +1,24 @@
 package src;
 
+import java.util.ArrayList;
+
 public class GameScreen {
     private int height, width;
     private char[][] screenBack;
+    private ArrayList<wall> walls;
 
     public GameScreen(int height, int width) {
+        public boolean touch_wall(int x,int y){
+            for(wall wall:walls){
+                if (wall.getX() == x && wall.getY()==y) {
+                    return true;
+                }
+            }
+            return false;
+        }
         this.height = height;
         this.width = width;
+        this.walls = new ArrayList<>();
         this.screenBack = new char[this.height][this.width]; 
     }
 
@@ -40,7 +52,7 @@ public class GameScreen {
         return this.screenBack[y][x];
     }
 
-    public void setOobjectOnLocation(GameObject object, int x,int y){
+    public void setObjectOnLocation(GameObject object, int x,int y){
         this.screenBack[y][x]= object.getSymbol();
     }     
 }
