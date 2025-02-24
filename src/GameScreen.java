@@ -5,6 +5,19 @@ public class GameScreen {
     private char[][] screenBack;
 
     public GameScreen(int height, int width) {
+<<<<<<< Updated upstream
+=======
+        /* 
+        public boolean touch_wall(int x,int y){
+            for(wall wall:walls){
+                if (wall.getX() == x && wall.getY()==y) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        */
+>>>>>>> Stashed changes
         this.height = height;
         this.width = width;
         this.screenBack = new char[this.height][this.width]; 
