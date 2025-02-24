@@ -3,6 +3,10 @@ package src;
 public class GameScreen {
     private int height, width;
     private char[][] screenBack;
+    public void setObjectOnLocation(GameObject object, int x, int y) {
+        this.screenBack[y][x] = object.getSymbol();
+    }
+    
 
     public GameScreen(int height, int width) {
         this.height = height;
