@@ -10,15 +10,15 @@ public class wall extends GameObject {
 		setSymbol(symbol);
 	}
 
-	public void addWallsRow(GameScreen screen, wall wall, int rowNumber) {
+	public void addWallsRow(GameScreen screen, int rowNumber) {
 		for (int i = 0; i < screen.getWidth(); i++) {
-			screen.setObjectOnLocation(wall, i, rowNumber);
+			screen.setObjectOnLocation(new wall(), i, rowNumber);
 		}
 	}
 
-	public void addWallsColumn(GameScreen screen, wall  wall, int columnNumber) {
+	public void addWallsColumn(GameScreen screen, int columnNumber) {
 		for (int i = 0; i < screen.getHeight(); i++) {
-			screen.setObjectOnLocation(wall, columnNumber, i);
+			screen.setObjectOnLocation(new wall(), columnNumber, i);
 		}
 	}
 }
