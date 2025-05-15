@@ -8,6 +8,7 @@ public class Main {
         final int screen_height = 10;
         final int snake_position_x = screen_width / 2;
         final int snake_position_y = screen_height / 2;
+        int score = 0;
        
         GameScreen screen = new GameScreen(screen_height, screen_width); 
         screen.InitScreen();
@@ -22,6 +23,10 @@ public class Main {
         wall.addWallsColumn(screen, 0);
         wall.addWallsRow(screen, screen_height-1);
         wall.addWallsColumn(screen,screen_width-1);
+
+        Fruit fruit = new Fruit();
+        fruit.spawnFruit(screen);
+        
         
 
         while (isRunning) {
@@ -45,6 +50,7 @@ public class Main {
                 case 'Q':
                     isRunning = false;
                     System.out.println("Game Over!");
+                    System.out.println("Your Score is :" + score);
                     break;
                 default:
                     System.out.println("Invalid input nothing happend");
@@ -52,9 +58,16 @@ public class Main {
             int newX = snake.getX(); 
             int newY = snake.getY();
         
+            if (newX == fruit.getX() && newY == fruit.getY()) { 
+                System.out.println("You ate a fruit!");
+                fruit.spawnFruit(screen);
+                score++;
+
+            }
             
             if (newX == 0 || newX == screen_width - 1 || newY == 0 || newY == screen_height - 1) {
                 System.out.println("Game Over! You hit a wall.");
+                System.out.println("Your Score is :" + score);
                 isRunning = false;
             }
         }
